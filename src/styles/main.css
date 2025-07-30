@@ -7,7 +7,7 @@
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -28,13 +28,13 @@ header {
 }
 
 .container-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 10px;
-  padding: 5px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    padding: 5px 30px;
 }
 
 .container-header a {
@@ -104,9 +104,9 @@ nav ul li:hover {
 
 main {
     background-color: #F5F5F7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .icons-div {
@@ -122,8 +122,15 @@ main {
     font-size: 14px;
     outline: none;
 }
+#btnLupa {
+    font-size: 1.1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
 
 .carrinho {
+    background-color: transparent;
     font-size: 1.1em;
     color: #353535;
     cursor: pointer;
@@ -300,7 +307,7 @@ main {
 .iphone-cards article {
     color: #1D1D1F;
     justify-content: space-between;
-    width: 250px; 
+    width: 250px;
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -316,10 +323,27 @@ main {
 }
 
 .botoes {
-  display: flex;
-  justify-content: center;
-  margin-top: auto;
-  gap: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #F5F5F7;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.9em;
 }
 
 
@@ -327,28 +351,26 @@ main {
 
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
-  .container-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-  }
+    .container-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
 
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 8px;
-  }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 8px;
+    }
 
-  .icons-div {
-    width: 100%;
-    justify-content: space-between;
-  }
+    .icons-div {
+        width: 100%;
+        justify-content: space-between;
+    }
 
-  .search {
-    width: 100%;
-    max-width: 100%;
-  }
+    .search {
+        width: 100%;
+        max-width: 100%;
+    }
 }
-
-
