@@ -1,3 +1,11 @@
+:root {
+    --cor-header: #fff;
+    --cor-fundo: #F5F5F7;
+    --cor-button: #0071e3;
+    --cor-button2: #119600;
+    --cor-button2hover: #17be01;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -27,6 +35,10 @@ header {
   width: 100%;
   gap: 10px;
   padding: 5px 30px;
+}
+
+.container-header a {
+    text-decoration: none;
 }
 
 
@@ -129,7 +141,8 @@ main {
 }
 
 .headline i {
-    font-size: 52px;
+    font-size: 48px;
+    cursor: pointer;
 }
 
 .subhead {
@@ -152,7 +165,7 @@ main {
 }
 
 .button-sbm {
-    background-color: #0071e3;
+    background-color: var(--cor-button2);
     color: white;
     font-family: 'Inter', sans-serif;
     justify-content: center;
@@ -166,25 +179,25 @@ main {
 }
 
 .button-sbm:hover {
-    background-color: #005bb5;
+    background-color: var(--cor-button2hover);
 }
 
 .button-comprar {
     background-color: #fff;
-    color: #0071e3;
+    color: var(--cor-button2);
     font-family: 'Inter', sans-serif;
     margin-left: 10px;
     font-size: 16px;
     font-weight: 500;
     padding: 12px 20px;
-    border: 1.5px solid #0071e3;
+    border: 1.5px solid var(--cor-button2);
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .button-comprar:hover {
-    background-color: #0071e3;
+    background-color: var(--cor-button2);
     color: white;
 }
 
