@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vw;
-    
+    overflow-x: hidden;
 }
 
 header {
@@ -82,7 +82,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+    font-weight: 400;
     transition: color 0.3s ease;
 }
 
@@ -119,8 +119,8 @@ main {
 
 .headline {
     text-align: center;
-    margin-top: 1em;
-    margin-bottom: 7px;
+    margin: 1.1em 0;
+    margin-bottom: 10px;
     font-size: 58px;
     font-weight: 620;
     color: #1D1D1F;
@@ -128,10 +128,15 @@ main {
     cursor: pointer;
 }
 
+.headline i {
+    font-size: 52px;
+}
+
 .subhead {
     text-align: center;
     margin-top: 0;
     font-size: 28px;
+    font-weight: 400;
     color: #1D1D1F;
     font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
     cursor: pointer;
@@ -150,9 +155,10 @@ main {
     background-color: #0071e3;
     color: white;
     font-family: 'Inter', sans-serif;
+    justify-content: center;
     font-size: 16px;
     font-weight: 500;
-    padding: 12px 28px;
+    padding: 12px 20px;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -170,7 +176,7 @@ main {
     margin-left: 10px;
     font-size: 16px;
     font-weight: 500;
-    padding: 12px 28px;
+    padding: 12px 20px;
     border: 1.5px solid #0071e3;
     border-radius: 30px;
     cursor: pointer;
@@ -264,33 +270,42 @@ main {
 }
 
 .iphone-container {
-    width: 100vw;
+    width: 100%;
+    padding: 40px 30px;
     background-color: #fff;
-    padding: 40px 20px;
+    box-sizing: border-box;
 }
 
 .iphone-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
 .iphone-cards article {
-    background-color: #fff;
     color: #1D1D1F;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px; /* largura fixa para manter os cards proporcionais */
+    justify-content: space-between;
+    width: 250px; 
     text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease;
 }
 
 .iphone-cards img {
-    max-width: 50%;
+    max-width: 90%;
     height: auto;
-    border-radius: 10px;
+}
+
+.button-sbm,
+.button-comprar {
+    white-space: nowrap;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  gap: 10px;
 }
 
 
