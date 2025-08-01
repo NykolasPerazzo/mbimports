@@ -1,9 +1,10 @@
 :root {
-    --cor-header: #fff;
+    --cor-branco: #fff;
     --cor-fundo: #F5F5F7;
     --cor-button: #0071e3;
     --cor-button2: #119600;
     --cor-button2hover: #17be01;
+    --cor-black: #000;
 }
 
 * {
@@ -103,7 +104,7 @@ nav ul li:hover {
 }
 
 main {
-    background-color: #F5F5F7;
+    background-color: var(--cor-fundo);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,7 +122,9 @@ main {
     border: 1px solid #ccc;
     font-size: 14px;
     outline: none;
+    display: none;
 }
+
 #btnLupa {
     font-size: 1.1em;
     background-color: transparent;
@@ -172,7 +175,7 @@ main {
 }
 
 .button-sbm {
-    background-color: var(--cor-button2);
+    background-color: var(--cor-button);
     color: white;
     font-family: 'Inter', sans-serif;
     justify-content: center;
@@ -186,25 +189,25 @@ main {
 }
 
 .button-sbm:hover {
-    background-color: var(--cor-button2hover);
+    background-color: var(--cor-button);
 }
 
 .button-comprar {
     background-color: #fff;
-    color: var(--cor-button2);
+    color: var(--cor-button);
     font-family: 'Inter', sans-serif;
     margin-left: 10px;
     font-size: 16px;
     font-weight: 500;
     padding: 12px 20px;
-    border: 1.5px solid var(--cor-button2);
+    border: 1.5px solid var(--cor-button);
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .button-comprar:hover {
-    background-color: var(--cor-button2);
+    background-color: var(--cor-button);
     color: white;
 }
 
@@ -233,12 +236,58 @@ main {
 .linha {
     width: 100%;
     height: 15px;
-    background-color: #ffffff;
+    background-color: var(--cor-header);
+}
+
+.js-player {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+/* container do trailer */
+.plyr--video {
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+/* remove barra de progresso, tempo, volume */
+.plyr__progress,
+.plyr__time,
+.plyr__volume,
+.plyr__controls [data-plyr="mute"],
+.plyr__controls [data-plyr="fast-forward"],
+.plyr__controls [data-plyr="rewind"] {
+  display: none !important;
+}
+
+/* centraliza o botão de play e da destaque */
+.plyr__control--overlaid {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  font-size: 28px;
+}
+
+.plyr__control--overlaid:hover {
+  background-color: #fff;
+  transform: scale(1.05);
 }
 
 .categorias {
+    background-color: var(--cor-fundo);
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 40px;
     padding: 40px 20px;
@@ -284,11 +333,6 @@ main {
     transform: scale(1.05);
 }
 
-.banner img {
-    width: 100%;
-    height: auto;
-}
-
 .iphone-container {
     width: 100%;
     padding: 40px 30px;
@@ -298,16 +342,28 @@ main {
 
 .iphone-cards {
     display: flex;
-    flex-wrap: wrap;
-    padding: 60px 0;
+    flex-wrap: nowrap;
     gap: 30px;
-    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 30px;
+    -webkit-overflow-scrolling: touch;
 }
 
-.iphone-cards article {
+.iphone-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.iphone-cards {
+  scrollbar-width: none; 
+}
+
+.produto-card {
+    min-width: 250px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
     color: #1D1D1F;
-    justify-content: space-between;
-    width: 250px;
+    width: 25%;
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -315,6 +371,11 @@ main {
 .iphone-cards img {
     max-width: 70%;
     height: auto;
+     transition: transform 0.3s ease;
+}
+
+.iphone-cards img:hover {
+    transform: scale(1.05);
 }
 
 .button-sbm,
@@ -326,9 +387,28 @@ main {
     display: flex;
     justify-content: center;
     margin-top: auto;
-    gap: 10px;
+    gap: 15px;
 }
 
+.container-watch {
+    background-color: var(--cor-black);
+    display: block;
+    width: 100vw;
+}
+
+.banner-Watch {
+    height: 400px;
+    background-color: var(--cor-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-Watch img {
+    width: 26%;
+    height: auto;
+    rotate: 270deg;
+}
 
 
 

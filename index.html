@@ -7,9 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link rel="stylesheet" href="./src/styles/main.css">
     <link rel="shortcut icon" href="./src/assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
     <title>MB IMPORTS</title>
 </head>
@@ -66,56 +68,6 @@
 
         <div class="linha"></div>
 
-
-        <section class="iphone-container" id="iphone">
-            <h2 class="headline">Compare os modelos</h2>
-            <div class="iphone-cards">
-                <article class="produto-card">
-                    <img src="./src/assets/iphone16pro/iphone-compare-iphone-16-pro.jpg.jfif" alt="iPhone 16 Pro">
-                    <h2>iPhone 16 Pro </h2>
-                    <p>O iPhone 16 Pro</p>
-                    <div class="botoes">
-                        <button class="button-sbm">Saiba mais</button>
-                        <button class="button-comprar">Comprar</button>
-                    </div>
-                </article>
-
-                <article class="produto-card">
-                    <img src="./src/assets/iphone16pro/iphone-compare-iphone-16-02.jpg.jfif" alt="iPhone 16">
-                    <h2>iPhone 16</h2>
-                    <p>O iPhone 16 </p>
-
-                    <div class="botoes">
-                        <button class="button-sbm">Saiba mais</button>
-                        <button class="button-comprar">Comprar</button>
-                    </div>
-                </article>
-
-                <article class="produto-card">
-                    <img src="./src/assets/iphone16pro/iphone-compare-iphone-16e-03.jpg.jfif" alt="iPhone 16e">
-                    <h2>iPhone 16e</h2>
-                    <p>O iPhone 16e</p>
-
-                    <div class="botoes">
-                        <button class="button-sbm">Saiba mais</button>
-                        <button class="button-comprar">Comprar</button>
-                    </div>
-                </article>
-
-                <article class="produto-card">
-                    <img src="./src/assets/iphone16pro/iphone-compare-iphone-15-05.jpg.jfif" alt="iPhone 15">
-                    <h2>iPhone 15</h2>
-                    <p>O iPhone 15</p>
-
-                    <div class="botoes">
-                        <button class="button-sbm">Saiba mais</button>
-                        <button class="button-comprar">Comprar</button>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-
         <section class="categorias">
             <article class="category">
                 <a href="#">
@@ -145,7 +97,73 @@
                 </a>
             </article>
 
+        </section>
 
+        <div>
+            <h2 class="headline">iPhone 16 Pro</i></h2>
+        </div>
+        <video class="js-player" playsinline autoplay muted loop>
+            <source src="./src/assets/videos/iphone.mp4" type="video/mp4" />
+        </video>
+
+
+        <section class="iphone-container" id="iphone">
+            <h2 class="headline">Compare os modelos</h2>
+            <div class="iphone-cards">
+                <div style="min-width: 30px;"></div>
+                <article class="produto-card">
+                    <img src="./src/assets/iphone16pro/iphone-compare-iphone-16-pro.jpg.jfif" alt="iPhone 16 Pro">
+                    <h2>iPhone 16 Pro </h2>
+                    <p>O iPhone definitivo.</p>
+                    <div class="botoes">
+                        <button class="button-sbm">Saiba mais</button>
+                        <button class="button-comprar">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="produto-card">
+                    <img src="./src/assets/iphone16pro/iphone-compare-iphone-16-02.jpg.jfif" alt="iPhone 16">
+                    <h2>iPhone 16</h2>
+                    <p>Poderoso em tudo.</p>
+
+                    <div class="botoes">
+                        <button class="button-sbm">Saiba mais</button>
+                        <button class="button-comprar">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="produto-card">
+                    <img src="./src/assets/iphone16pro/iphone-compare-iphone-16e-03.jpg.jfif" alt="iPhone 16e">
+                    <h2>iPhone 16e</h2>
+                    <p>Um iPhone novo para chamar de seu.</p>
+
+                    <div class="botoes">
+                        <button class="button-sbm">Saiba mais</button>
+                        <button class="button-comprar">Comprar</button>
+                    </div>
+                </article>
+
+                <article class="produto-card">
+                    <img src="./src/assets/iphone16pro/iphone-compare-iphone-15-05.jpg.jfif" alt="iPhone 15">
+                    <h2>iPhone 15</h2>
+                    <p>Impressionante como sempre.</p>
+
+                    <div class="botoes">
+                        <button class="button-sbm">Saiba mais</button>
+                        <button class="button-comprar">Comprar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <video class="js-player" width="75%" height="auto" playsinline autoplay muted loop>
+            <source src="./src/assets/videos/watch.mp4" type="video/mp4" />
+        </video>
+
+        <section class="container-watch" id="Watch">
+            <div class="banner-Watch">
+                <img src="./src/assets/aplewatch/applewatch-banner.jpg" alt="">
+            </div>
         </section>
 
     </main>
@@ -153,6 +171,19 @@
     <footer>
         <p>&copy; 2025 MB IMPORTS - Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Plyr -->
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script>
+        const trailer = new Plyr('.js-trailer', {
+            controls: ['play'],
+            autoplay: false,
+            muted: true,
+            loop: { active: true },
+            hideControls: true,
+        });
+    </script>
+
 
     <script src="./src/scripts/app.js"></script>
 </body>
