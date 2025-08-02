@@ -20,11 +20,11 @@
     <header class="cabecalho">
         <div class="container-header">
             <a href="#inicio">
-                <h1 class="logo">MB IMPORTS<i class="fab fa-apple"></i></h1>
+                <h1 class="logo">Nykolas Perazzo<i class="fab fa-apple"></i></h1>
             </a>
 
             <nav class="menu-nav">
-                <ul>
+                <ul id="menuList">
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#iphone">iPhone</a></li>
                     <li><a href="#macbooks">Mac</a></li>
@@ -41,7 +41,12 @@
                 </button>
                 <i class="fas fa-shopping-bag carrinho"></i>
             </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
+
+
     </header>
 
 
@@ -181,6 +186,18 @@
             muted: true,
             loop: { active: true },
             hideControls: true,
+        });
+    </script>
+
+    <script>
+        const btnLupa = document.getElementById('btnLupa');
+        const searchInput = document.getElementById('searchInput');
+
+        btnLupa.addEventListener('click', () => {
+            searchInput.classList.toggle('active');
+            if (searchInput.classList.contains('active')) {
+                searchInput.focus();
+            }
         });
     </script>
 

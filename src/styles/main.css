@@ -32,7 +32,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     gap: 10px;
     padding: 5px 30px;
@@ -53,6 +53,7 @@ header {
 
 .logo {
     font-size: 1.1em;
+    flex-wrap: nowrap;
     margin: 0;
     padding: 0;
     color: #333;
@@ -66,6 +67,7 @@ header {
     vertical-align: middle;
     font-size: 1.1em;
     cursor: pointer;
+    flex-wrap: nowrap;
 }
 
 nav {
@@ -75,6 +77,9 @@ nav {
 
 .menu-nav {
     flex-grow: 1;
+}
+.menu-nav ul {
+    display: flex;
 }
 
 nav ul {
@@ -123,10 +128,14 @@ main {
     font-size: 14px;
     outline: none;
     display: none;
+} 
+
+.search.active {
+  display: inline-block;
 }
 
 #btnLupa {
-    font-size: 1.1em;
+    font-size: 1em;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -136,6 +145,12 @@ main {
     background-color: transparent;
     font-size: 1.1em;
     color: #353535;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    color: #333;
     cursor: pointer;
 }
 
@@ -251,11 +266,11 @@ main {
 
 /* container do trailer */
 .plyr--video {
-  max-width: 1000px;
-  margin: 40px auto;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    max-width: 1000px;
+    margin: 40px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
 }
 
 /* remove barra de progresso, tempo, volume */
@@ -265,22 +280,22 @@ main {
 .plyr__controls [data-plyr="mute"],
 .plyr__controls [data-plyr="fast-forward"],
 .plyr__controls [data-plyr="rewind"] {
-  display: none !important;
+    display: none !important;
 }
 
 /* centraliza o botão de play e da destaque */
 .plyr__control--overlaid {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #000;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  font-size: 28px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
 }
 
 .plyr__control--overlaid:hover {
-  background-color: #fff;
-  transform: scale(1.05);
+    background-color: #fff;
+    transform: scale(1.05);
 }
 
 .categorias {
@@ -355,7 +370,7 @@ main {
 }
 
 .iphone-cards {
-  scrollbar-width: none; 
+    scrollbar-width: none;
 }
 
 .produto-card {
@@ -371,7 +386,7 @@ main {
 .iphone-cards img {
     max-width: 70%;
     height: auto;
-     transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .iphone-cards img:hover {
@@ -432,25 +447,89 @@ footer {
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
     .container-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 5px;
+        padding: 10px 2px;
+    }
+
+    .logo {
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        flex-wrap: nowrap;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
         width: 100%;
-        gap: 8px;
+        gap: 5px;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: inline-block;
+        padding: 10px 0;
+        font-size: 16px;
     }
 
     .icons-div {
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 6px;
+
     }
 
     .search {
         width: 100%;
         max-width: 100%;
+        display: none;
+        flex-wrap: nowrap;
     }
+
+    .menu-nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        border-radius: 8px;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: block;
+        align-items: center;
+
+    }
+
+    .menu-nav ul.active {
+        display: flex;
+    }
+
+    .menu-nav ul li a {
+        color: #fff;
+        padding: 10px;
+    }
+
+
+
 }
