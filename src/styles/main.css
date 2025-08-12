@@ -514,45 +514,64 @@ main {
 .formas-pagamento {
     text-align: start;
     margin: 60px 0 40px 0;
+    width: 100%;
 }
 
-
 .formas-pagamento h2 {
-    margin-bottom: 32px;
-    font-size: 42px;
-    font-weight: 600;
-    font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    margin: 0 25px;
+    font-size: 34px;
+    font-weight: 500;
+    color: #1D1D1F;
+    margin-bottom: 20px;
+
 }
 
 .payments-list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    margin: 0 50px;
+    padding-bottom: 12px;
+    scrollbar-width: thin;
+}
+
+.payments-list::-webkit-scrollbar {
+    height: 8px;
+}
+
+.payments-list::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
 }
 
 .payment {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     background: #fff;
     border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    padding: 24px 18px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    padding: 20px 8px;
+    width: 150px;
     min-width: 280px;
-    max-width: 260px;
+    flex: 0 0 auto;
 }
 
 .payment img {
-    width: 38px;
+    width: 30px;
     height: auto;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
+    margin-top: 10px;
 }
 
-.payment h3, .payment p {
-    text-align: center;
-    margin: 0 0 8px 0;
+.payment h3,
+.payment p {
+    text-align: start;
+    margin: 0 20px 8px 0;
+    width: 100%;
 }
 
 .container-watch {
@@ -593,8 +612,6 @@ footer {
 
 
 
-
-/* Responsivo para telas menores */
 @media (max-width: 768px) {
     .container-header {
         display: flex;
@@ -708,14 +725,15 @@ footer {
     }
 
     .description {
-        font-size: 15px;
-        max-width: 300px;
-        margin: 50px auto;
+        font-size: 16px;
+        max-width: 400px;
+        padding-top: 3em;
     }
 
     .iphone-img img {
-        width: 80%;
+        width: 85%;
         height: auto;
+        margin-top: 3em;
     }
 
     .categorias {
@@ -775,7 +793,7 @@ footer {
     }
 
     .js-player {
-        width: 90%;
+        width: 93%;
         height: auto;
         margin: 20px auto;
         border-radius: 10;
@@ -848,7 +866,15 @@ footer {
         margin: 40px auto;
     }
 
+    .formas-pagamento h2 {
+        margin: 0 20px;
+        font-size: 32px;
+        font-weight: 700;
+        color: #1D1D1F;
+        margin-bottom: 20px;
+    }
 
+   
 }
 
 
@@ -1040,7 +1066,7 @@ footer {
     }
 
     .js-player {
-        width: 90%;
+        width: 93%;
         height: auto;
         margin: 20px auto;
         border-radius: 10;
@@ -1113,5 +1139,20 @@ footer {
         margin: 40px auto;
     }
 
+    .payments-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 10px;
+        scrollbar-width: thin;
+    }
+
+    .payment {
+        min-width: 150px;
+        max-width: 180px;
+        flex: 0 0 auto;
+    }
 
 }
