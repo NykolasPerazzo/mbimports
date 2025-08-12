@@ -10,7 +10,8 @@
 * {
     box-sizing: border-box;
     font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-    ;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -18,6 +19,7 @@ body {
     font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
+    max-width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -190,7 +192,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    margin-top: 17px;
     cursor: pointer;
 }
 
@@ -236,10 +238,10 @@ main {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
     color: #333;
-    max-width: 700px;
+    max-width: 800px;
     cursor: pointer;
 }
 
@@ -251,7 +253,7 @@ main {
 }
 
 .iphone-img img {
-    width: 80%;
+    width: 70%;
     height: auto;
     cursor: pointer;
 }
@@ -259,7 +261,7 @@ main {
 .linha {
     width: 100%;
     height: 15px;
-    background-color: var(--cor-header);
+    background-color: var(--cor-branco);
 }
 
 .js-player {
@@ -575,8 +577,8 @@ main {
     width: 100%;
 }
 
-.container-watch {
-    background-color: var(--cor-black);
+.watch-container {
+    background-color: var(--cor-branco);
     display: block;
     width: 100vw;
 }
@@ -613,7 +615,7 @@ footer {
 
 
 
-@media (min-width: 570px) and (max-width: 768px) {
+@media (min-width: 569px) and (max-width: 768px) {
     .container-header {
         display: flex;
         flex-direction: row;
@@ -703,35 +705,40 @@ footer {
     }
 
     .headline {
-        font-size: 36px;
-        margin-top: 0;
+        font-size: 30px;
+        margin-top: 2em;
     }
 
     .headline i {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .subhead {
         font-size: 18px;
+        margin-top: -10px;
     }
 
     .button-comprar {
-        font-size: 15px;
+        font-size: 14px;
         padding: 10px 15px;
     }
 
     .button-sbm {
-        font-size: 15px;
+        font-size: 14px;
         padding: 10px 15px;
     }
 
     .description {
-        font-size: 18px;
-        max-width: 400px;
+        font-size: 13px;
+        font-weight: 500;
+        width: 600px;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 0;
     }
 
     .iphone-img img {
-        width: 80%;
+        width: 70%;
         height: auto;
     }
 
@@ -1151,7 +1158,6 @@ footer {
     }
 
     .botoes {
-        display: flex;
         justify-content: center;
         margin-top: 0;
         gap: 15px;
@@ -1173,10 +1179,6 @@ footer {
     }
 
     .payments-list {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: auto;
         gap: 12px;
         padding-bottom: 10px;
         scrollbar-width: thin;
