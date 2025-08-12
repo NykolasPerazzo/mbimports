@@ -159,11 +159,6 @@ main {
     cursor: pointer;
 }
 
-.tela-inicial {
-    width: 100vw;
-    height: 100vh;
-}
-
 .headline {
     text-align: center;
     margin: 1.5em 0;
@@ -250,7 +245,7 @@ main {
 
 
 .iphone-img {
-    margin-top: 2em;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
 }
@@ -618,7 +613,7 @@ footer {
 
 
 
-@media (max-width: 768px) {
+@media (min-width: 570px) and (max-width: 768px) {
     .container-header {
         display: flex;
         flex-direction: row;
@@ -709,7 +704,7 @@ footer {
 
     .headline {
         font-size: 36px;
-        margin-top: 4em;
+        margin-top: 0;
     }
 
     .headline i {
@@ -732,15 +727,12 @@ footer {
 
     .description {
         font-size: 18px;
-        width: 90%;
-        max-width: 300px;
-        padding-top: 5em;
+        max-width: 400px;
     }
 
     .iphone-img img {
         width: 80%;
         height: auto;
-        margin-top: 6em;
     }
 
     .categorias {
@@ -1021,22 +1013,20 @@ footer {
     .button-comprar {
         font-size: 14px;
         padding: 10px 15px;
-        margin-top: -10px;
     }
 
     .button-sbm {
         font-size: 14px;
         padding: 10px 15px;
-        margin-top: -10px;
     }
 
     .description {
         font-size: 13px;
         font-weight: 400;
-        width: 400px;
+        width: 300px;
         margin: 0 auto;
-        margin-top: -3em;
-        margin-bottom: -7.5em;
+        margin-top: 15px;
+        margin-bottom: 0;
     }
 
     .iphone-img img {
